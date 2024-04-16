@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turk Market</title>
+    <script type="text/javascript">
+        function detectPlatform() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // Check for Android
+            if (/android/i.test(userAgent)) {
+                window.location.href = "https://play.google.com/store/apps/details?id=com.sirmuhammad.turkmarket_app";
+                return;
+            }
+
+            // Check for iOS
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location.href = "https://apps.apple.com/ru/app/turk-market/id6482292853";
+                return;
+            }
+
+    
+            window.location.href = "https://apps.apple.com/ru/app/turk-market/id6482292853";
+        }
+    </script>
+</head>
+<body onload="detectPlatform()">
+</body>
+</html>
